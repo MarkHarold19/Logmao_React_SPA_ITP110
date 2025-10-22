@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop - Order</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="order_style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="logo" href="home_page.html">Coffee Shop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home_page.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="order_page.html">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="loyalty_program_page.html">Loyalty Program</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact_us_page.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <div class="order-container">
+                    <h2 class="text-center mb-4">Order</h2>
+                    
+                    <div class="row">
+                        <div class="col-md-8">
+                            <!-- Coffee Menu -->
+                            <div class="menu-category">
+                                <h3>Coffee Menu</h3>
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="menu-item">
+                                            <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="menu-item-img" alt="Cappuccino">
+                                            <div class="menu-item-body">
+                                                <h5 class="menu-item-title">Cappuccino</h5>
+                                                <p class="mb-2">Espresso with steamed milk and a deep layer of foam</p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="menu-item-price">₱100</span>
+                                                    <button class="add-to-order" data-name="Cappuccino" data-price="100">Add to Order</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="menu-item">
+                                            <img src="https://images.unsplash.com/photo-1679148404766-a8bf879695e5?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG1hY2NoaWF0b3xlbnwwfHwwfHx8MA%3D%3D" class="menu-item-img" alt="Macchiato">
+                                            <div class="menu-item-body">
+                                                <h5 class="menu-item-title">Macchiato</h5>
+                                                <p class="mb-2">Espresso with a small amount of steamed milk</p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="menu-item-price">₱100</span>
+                                                    <button class="add-to-order" data-name="Macchiato" data-price="100">Add to Order</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="menu-item">
+                                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YW1lcmljYW5vfGVufDB8fDB8fHww" class="menu-item-img" alt="Americano">
+                                            <div class="menu-item-body">
+                                                <h5 class="menu-item-title">Americano</h5>
+                                                <p class="mb-2">Espresso with hot water for a smoother taste</p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="menu-item-price">₱90</span>
+                                                    <button class="add-to-order" data-name="Americano" data-price="90">Add to Order</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="menu-item">
+                                            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="menu-item-img" alt="Latte">
+                                            <div class="menu-item-body">
+                                                <h5 class="menu-item-title">Latte</h5>
+                                                <p class="mb-2">Espresso with steamed milk and a light layer of foam</p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="menu-item-price">₱110</span>
+                                                    <button class="add-to-order" data-name="Latte" data-price="110">Add to Order</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Pastry Menu -->
+                            <div class="menu-category">
+                                <h3>Pastry Menu</h3>
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="menu-item">
+                                            <img src="https://images.unsplash.com/photo-1623334044303-241021148842?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="menu-item-img" alt="Croissant">
+                                            <div class="menu-item-body">
+                                                <h5 class="menu-item-title">Croissant</h5>
+                                                <p class="mb-2">Buttery, flaky pastry perfect with coffee</p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="menu-item-price">₱80</span>
+                                                    <button class="add-to-order" data-name="Croissant" data-price="80">Add to Order</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="menu-item">
+                                            <img src="https://images.unsplash.com/photo-1607958996333-41aef7caefaa?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVmZmluc3xlbnwwfHwwfHx8MA%3D%3D" class="menu-item-img" alt="Blueberry Muffin">
+                                            <div class="menu-item-body">
+                                                <h5 class="menu-item-title">Blueberry Muffin</h5>
+                                                <p class="mb-2">Sweet muffin bursting with blueberries</p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="menu-item-price">₱70</span>
+                                                    <button class="add-to-order" data-name="Blueberry Muffin" data-price="70">Add to Order</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="menu-item">
+                                            <img src="https://images.unsplash.com/photo-1568051243858-533a607809a5?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="menu-item-img" alt="Chocolate Cookie">
+                                            <div class="menu-item-body">
+                                                <h5 class="menu-item-title">Chocolate Cookie</h5>
+                                                <p class="mb-2">Rich chocolate cookie with chunks</p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="menu-item-price">₱60</span>
+                                                    <button class="add-to-order" data-name="Chocolate Cookie" data-price="60">Add to Order</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="menu-item">
+                                            <img src="https://images.unsplash.com/photo-1639695854242-1385cdd69a08?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="menu-item-img" alt="Cinnamon Roll">
+                                            <div class="menu-item-body">
+                                                <h5 class="menu-item-title">Cinnamon Roll</h5>
+                                                <p class="mb-2">Sweet, spiced pastry with cream cheese icing</p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="menu-item-price">₱95</span>
+                                                    <button class="add-to-order" data-name="Cinnamon Roll" data-price="95">Add to Order</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <!-- Current Order Summary -->
+                            <div class="customer-details">
+                                <h3>Customer Details</h3>
+                                <form id="customer-form">
+                                    <div class="row">
+                                        <div class="form-group col-md-12 mb-3">
+                                            <label for="fullName" class="form-label">Full Name</label>
+                                            <input type="text" class="form-control" id="fullName" required>
+                                        </div>
+                                        <div class="form-group col-md-12 mb-3">
+                                            <label for="phoneNumber" class="form-label">Phone Number</label>
+                                            <input type="tel" class="form-control" id="phoneNumber" pattern="[0-9]{11}" maxlength="11" required>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="current-order">
+                                <h3>Your Order</h3>
+                                <div id="order-summary">
+                                    <div class="empty-order text-center py-3">
+                                        <p>Your order is empty</p>
+                                        <p class="small">Add items from the menu</p>
+                                    </div>
+                                </div>
+                                <div class="total-display mt-3">
+                                    <p class="mb-0 fw-bold">Total:</p>
+                                    <p class="total-price mb-0">₱0</p>
+                                </div>
+                                <button id="place-order" class="place-order-btn mt-3">Place Order</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="order-confirmation" class="order-confirmation">
+                        <h3 class="text-success">Order Confirmed!</h3>
+                        <p>Your order will be ready soon.</p>
+                        <p>Total: <span id="confirmed-price" class="fw-bold">₱0</span></p>
+                        <button id="new-order" class="new-order-btn">Place Another Order</button>
+                    </div>
+
+                    <div id="order-history" class="order-history">
+                        <h3>Your Recent Orders</h3>
+                        <div id="order-items-list">
+                            <div class="empty-history">No orders yet. Place your first order above!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-3">
+        <p>&copy; Copyright 2025. All Rights Reserved | Author: Mark Harold Logmao</p>
+        <p>ITP-110 | Web Technologies</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let currentOrder = [];
+            const orderSummaryElement = document.getElementById('order-summary');
+            const totalPriceElement = document.querySelector('.total-price');
+            const placeOrderBtn = document.getElementById('place-order');
+            const customerForm = document.getElementById('customer-form');
+            const fullNameInput = document.getElementById('fullName');
+            const phoneNumberInput = document.getElementById('phoneNumber');
+            const orderConfirmation = document.getElementById('order-confirmation');
+            const newOrderBtn = document.getElementById('new-order');
+            const emptyOrderText = document.querySelector('.empty-order');
+
+            // Add item to the current order
+            function addToOrder(name, price) {
+                // Check if item already exists in the order
+                const itemIndex = currentOrder.findIndex(item => item.name === name);
+                if (itemIndex !== -1) {
+                    // If item exists, increment the quantity
+                    currentOrder[itemIndex].quantity++;
+                } else {
+                    // If item doesn't exist, add new item to the order
+                    currentOrder.push({ name, price, quantity: 1 });
+                }
+
+                updateOrderSummary();
+            }
+
+            // Update order summary UI
+            function updateOrderSummary() {
+                if (currentOrder.length === 0) {
+                    emptyOrderText.style.display = 'block';
+                    orderSummaryElement.innerHTML = '';
+                    totalPriceElement.textContent = '₱0';
+                } else {
+                    emptyOrderText.style.display = 'none';
+                    orderSummaryElement.innerHTML = '';
+                    let total = 0;
+                    currentOrder.forEach(item => {
+                        const itemTotal = item.price * item.quantity;
+                        total += itemTotal;
+
+                        const orderItemElement = document.createElement('div');
+                        orderItemElement.className = 'order-item';
+                        orderItemElement.innerHTML = `
+                            <div class="order-item-details">
+                                <span>${item.name} x ${item.quantity}</span>
+                                <span>₱${itemTotal}</span>
+                            </div>
+                        `;
+                        orderSummaryElement.appendChild(orderItemElement);
+                    });
+
+                    totalPriceElement.textContent = `₱${total}`;
+                }
+            }
+
+            // Add event listener to menu items
+            const addButtons = document.querySelectorAll('.add-to-order');
+            addButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const itemName = button.getAttribute('data-name');
+                    const itemPrice = parseInt(button.getAttribute('data-price'));
+                    addToOrder(itemName, itemPrice);
+                });
+            });
+
+            // Place order function
+            placeOrderBtn.addEventListener('click', function (event) {
+                event.preventDefault();
+
+                const fullName = fullNameInput.value.trim();
+                const phoneNumber = phoneNumberInput.value.trim();
+
+                if (!fullName || !phoneNumber) {
+                    alert('Please fill in your name and phone number.');
+                    return;
+                }
+
+                if (currentOrder.length === 0) {
+                    alert('Please add at least one item to your order.');
+                    return;
+                }
+
+                // Prepare order data
+                const orderData = {
+                    customer_name: fullName,
+                    phone_number: phoneNumber,
+                    order_items: JSON.stringify(currentOrder),
+                    total_amount: currentOrder.reduce((total, item) => total + (item.price * item.quantity), 0)
+                };
+
+                // Send order to backend (save_order.php)
+                fetch('save_order.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: new URLSearchParams(orderData)
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.success) {
+                        // Show confirmation and clear the order
+                        orderConfirmation.style.display = 'block';
+                        document.getElementById('confirmed-price').textContent = `₱${orderData.total_amount}`;
+                        currentOrder = [];
+                        updateOrderSummary();
+                    } else {
+                        alert('Error placing order: ' + data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error submitting order. Please try again.');
+                });
+            });
+
+            // New order button
+            newOrderBtn.addEventListener('click', function () {
+                orderConfirmation.style.display = 'none';
+                customerForm.reset();
+                currentOrder = [];
+                updateOrderSummary();
+            });
+        });
+    </script>
+</body>
+</html>

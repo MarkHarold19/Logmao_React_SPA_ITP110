@@ -1,0 +1,7 @@
+@import './styles/global.css';
+@import './styles/home_style.css';
+@import './styles/order_style.css';
+@import './styles/loyalty_program_style.css';
+@import './styles/contact_us_style.css';
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
